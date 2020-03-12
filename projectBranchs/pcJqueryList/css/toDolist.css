@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #CDCDCD;
+}
+/* 头部 */
+header{
+    height: 50px;
+    background-color: #323232;
+    position: relative;
+}
+header div,
+header input{
+    position: absolute;
+    top: 50%;
+}
+header div{
+    height: 30px;
+    color: #DDDDDD;
+    margin-top: -15px;
+    margin-left: 470px;
+    line-height: 30px;
+    font-size: 24px;
+}
+header input{
+    height: 26px;
+    width: 350px;
+    margin-top: -13px;
+    margin-left: 710px;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    box-shadow:  0 1px 0 rgba(255,255,255,0.24), 0 1px 6px rgba(0,0,0,0.45) inset;
+    padding-left: 10px;
+}
+/* 正在完成 */
+.ingbox,
+.donebox{
+    width: 620px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+.ingbox h2,
+.donebox h2{
+    line-height: 70px;
+    height: 70px;
+}
+.olbox li,
+.ulbox li{
+    height: 32px;
+    padding-left: 45px;
+    padding-right: 45px;
+    line-height: 32px;
+    border-left: 5px solid #629A9C;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    cursor: move;
+    margin-bottom: 10px;
+}
+.ulbox li{
+    background-color: #E6E6E6!important;
+    border-left: 5px solid #B3B3B3!important;
+}
+.olbox li input,
+.ulbox li input{
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    top: 50%;
+    margin-top: -11px;
+    left: 10px;
+}
+.olbox li a,
+.ulbox li a{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+    border-radius: 14px;
+    border: 6px double #FFF;
+    background: #CCC;
+    line-height: 14px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.olcountbox,
+.ulcountbox{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: pink;
+    right: 15px;
+    top: 5px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 25px;
+}

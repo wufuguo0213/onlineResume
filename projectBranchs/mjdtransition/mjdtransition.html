@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的案例--Vue+Vant仿京东</title>
+    <link rel="stylesheet" type="text/css" href="../stackedCards.css"/>
+    <style>
+        /* 初始化 */
+        ul,
+        ol {
+            list-style: none;
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        input,
+        button {
+            border: 0;
+            outline: 0;
+            background: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover,
+        a:link,
+        a:focus {
+            outline: 0;
+            text-decoration: none;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            border: 0;
+            /* -ms-interpolation-mode: bicubic; IE7以下 */
+        }
+        /* 导航栏start  */
+        .container nav {
+            height: 50px;
+            background-color: #222222;
+            position: relative;
+        }
+        .container nav ul {
+            width: 300px;
+            position: absolute;
+            height: 50px;
+            right: 200px;
+            display: flex;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        .container nav ul li {
+            text-align: center;
+            float: left;
+            flex: 1;
+            color: #ccc;
+        }
+        .container nav ul li:hover {
+            color: #fff;
+        }
+        .navlicurrent {
+            color: #fff !important;
+            background-color: #000;
+        }
+        /* 标题 */
+        .mainbox{
+            width: 1200px;
+            height: 1000px;
+            margin: 0 auto;
+        }
+        .mainbox h1{
+            font-weight: normal;
+            font-size: 30px;
+            height: 100px;
+            line-height: 100px;
+            border-bottom: 1px solid #ccc;
+        }
+        .mainbox ul{
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .mainbox ul li{
+            height: 50px;
+            width: 100%;
+            line-height: 20px;
+            padding-left: 10px;
+            border-bottom: 1px solid rgb(228, 228, 228);
+            line-height: 50px;
+            font-size: 14px;
+        }
+        .mainbox ul li:nth-child(1){
+            height: 50px;
+            font-size: 20px!important;
+            font-weight: bold;
+            color: #31708f;
+            border-bottom: none!important;
+            background-color: #d9edf7;
+            border-radius: 5px;
+        }
+        #loacltiona{
+            height: 30px!important;
+            width: 50px!important;
+            cursor: pointer;
+        }
+        #loacltiona span{
+            display: block;
+            height: 30px;
+            width: 50px;
+            color: #337ab7;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        #loacltiona:hover{
+            color: #165994;
+            text-decoration: underline;
+        }
+        /* 轮播图 */
+        .picsbox{
+            border-top: 2px solid #ccc;
+            padding-top: 50px;
+            width: 100%
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>首页</li>
+                <li>求职简历</li>
+                <li>联系方式</li>
+            </ul>
+        </nav>
+        <main class="mainbox">
+            <h1>Vue框架+Vant组件仿京东</h1>
+            <ul>
+                <li>项目技术:</li>
+                <li>1.Vue框架</li>
+                <li>2.Vant移动端组件库</li>
+                <li>3.Webapp</li>
+            </ul>
+            <div id="loacltiona">
+                <span>前往</span>
+            </div>
+            <div class="picsbox">
+                    <div class="container-fixed stacked-cards stacked-cards-slide">
+                            <ul>
+                                <li><img src="index.png"></li>
+                                <li><img src="catelist.png"></li>
+                                <li><img src="car.png"></li>
+                                <li><img src="mjdmine.png"></li>
+                                <li><img src="code.png"></li>
+                            </ul>
+                        </div>
+            </div>
+        </main>
+    </div>
+    <script src="../stackedCards.min.js"></script>
+    <script>
+            var stackedCardSlide = new stackedCards({
+                    selector: '.stacked-cards-slide',
+                    layout: "slide",
+                    transformOrigin: "center",
+                });
+                stackedCardSlide.init();
+                var loacltiona = document.querySelector('#loacltiona');
+                loacltiona.addEventListener('click',function(){
+                    location.assign('../mvuevantjd/index.html');
+                })
+    </script>
+</body>
+</html>
