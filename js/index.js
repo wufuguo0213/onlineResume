@@ -1,10 +1,18 @@
 window.addEventListener('load',function(){
     // 绑定跳转事件
     var pcli1 = document.querySelector('#pcli1');
+    var pcli2 = document.querySelector('#pcli2');
+    var pcli3 = document.querySelector('#pcli3');
     var mli1 = document.querySelector('#mli1');
     var mli2 = document.querySelector('#mli2');
     pcli1.addEventListener('click',function(){
         location.assign('projectBranchs/pctransition1/PCtransition1.html');
+    })
+    pcli2.addEventListener('click',function(){
+        location.assign('projectBranchs/emailtransition/PCtransition1.html');
+    })
+    pcli3.addEventListener('click',function(){
+        location.assign('projectBranchs/newstransition/PCtransition1.html');
     })
     mli2.addEventListener('click',function(){
         location.assign('projectBranchs/mjdtransition/mjdtransition.html');
